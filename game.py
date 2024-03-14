@@ -23,6 +23,11 @@ print(f"Palabra: {word_displayed}")
 for i in range(max_attempts):
     # Pedir al jugador que ingrese una letra
     letter = input("Ingresa una letra: ").lower()
+    
+    # Solucion bug de caracter vacio
+    if letter == "":
+        print("¡El espacio no es un caracter valido! Ingrese otro caracter")
+        continue
  
     # Verificar si la letra ya ha sido adivinada
     if letter in guessed_letters:
