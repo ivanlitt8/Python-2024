@@ -16,8 +16,29 @@ fallos = 0
 guessed_letters = []
 
 print("¡Bienvenido al juego de adivinanzas!")
+dificultad = input("Por favor seleccione su nivel: fácil, media, difícil: ")
+
+# Mostrar la letras segun dificultad
+if dificultad == "facil":
+    # Mostrar todas las vocales considerando acentos
+    vocales = "aáeéiíoóuú"
+    word_displayed = ""
+    for letra in secret_word:
+        if letra in vocales:
+            word_displayed += letra
+        else:
+            word_displayed += "_"
+elif dificultad == "media":
+    # Mostrar ultima y primer letra
+    word_displayed = secret_word[0] + "_" * (len(secret_word)-2) + secret_word[-1]
+elif dificultad == "dificil":
+    # Original
+    word_displayed = "_" * len(secret_word)
+else:
+    print("Nivel de dificultad no válido. Intente nuevamente.")
+    exit()
+    
 print("Estoy pensando en una palabra. ¿Puedes adivinar cuál es?")
-word_displayed = "_" * len(secret_word)
 
 # Mostrarla palabra parcialmente adivinada
 print(f"Palabra: {word_displayed}")
