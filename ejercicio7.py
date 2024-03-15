@@ -25,4 +25,4 @@ print("La cadena resultante sin múltiplos de 3 es:", resultado)
 
 
 # Consultar este ejercicio. Cadena es necesariamente un string ? 
-# se puede hacer una cadena de string en un vector
+# se puede hacer una cadena de string en un vector en este caso?
