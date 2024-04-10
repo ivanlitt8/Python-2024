@@ -1,15 +1,15 @@
 def contar_palabras_con_string(frase, palabra):
-    # Convertir la frase y la palabra a minúsculas para hacer la comparación sin distinguir entre mayúsculas y minúsculas
+    # Convierto la frase y la palabra a minusculas .
     frase = frase.lower()
     palabra = palabra.lower()
     
-    # Dividir la frase en palabras
+    # Divido la frase en palabras.
     palabras = frase.split()
     
-    # Contar la cantidad de veces que aparece la palabra en la lista de palabras
+    # Cuento la cantidad de veces que aparece la palabra en la lista de palabras.
     cantidad = palabras.count(palabra)
     
-    # Imprimir el resultado
+    # Imprimo resultado.
     print("Resultado:", cantidad)
 
 # Ejemplos

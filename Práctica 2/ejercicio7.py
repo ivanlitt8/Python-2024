@@ -1,35 +1,33 @@
 def contar_caracteres(frase):
-    # Inicializar contadores
+    # Contadores.
     mayusculas = 0
     minusculas = 0
     no_letras = 0
     
-    # Recorrer cada carácter en la frase
+    # Recorro cada caracter en la frase.
     for caracter in frase:
-        # Contar mayúsculas
+        # Cuento mayusculas
         if caracter.isupper():
             mayusculas += 1
-        # Contar minúsculas
+        # Cuento minusculas
         elif caracter.islower():
             minusculas += 1
-        # Contar caracteres no letras
+        # Cuento caracteres de tipo no letras
         elif not caracter.isspace():
             no_letras += 1
     
-    # Dividir la frase en palabras para contar su cantidad
+    # Divido la frase en palabras para contar su cantidad
     palabras = frase.split()
     cantidad_palabras = len(palabras)
     
-    # Imprimir los resultados
+    # Impresion
     print("Mayúsculas:", mayusculas)
     print("Minúsculas:", minusculas)
     print("Caracteres no letras:", no_letras)
     print("Cantidad de palabras:", cantidad_palabras)
 
-# Frase proporcionada
 text = """ La brecha salarial alcanzó el 27,7%: las mujeres ocupadas
 debieron trabajar 8 días y 10 horas más que los varones ocupados para
 ganar lo mismo que ellos en un mes. """
 
-# Llamar a la función para contar caracteres
 contar_caracteres(text)

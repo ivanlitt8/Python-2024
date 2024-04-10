@@ -1,15 +1,15 @@
-def analizar_articulo(article):
-    # Separar el título y el resumen
-    titulo, resumen = article.split("resumen:")
+def analizar(articulo):
+    # Separo titulo de resumen.
+    titulo, resumen = articulo.split("resumen:")
     
-    # Verificar el título
+    # Verifico titulo.
     titulo_palabras = len(titulo.split())
     if titulo_palabras > 10:
         print("Título: not ok")
     else:
         print("Título: ok")
     
-    # Analizar el resumen
+    # Separo resumen en oraciones.
     oraciones = resumen.split(".")
     faciles = 0
     aceptables = 0
@@ -17,8 +17,9 @@ def analizar_articulo(article):
     muy_dificiles = 0
     
     for oracion in oraciones:
-        palabras = len(oracion.split()) # Contar palabras en la oración
-        # Clasificar la oración según el número de palabras
+         # Cuento las palabras en la oracion.
+        palabras = len(oracion.split())
+        # Clasifico la oración segun el numero de palabras.
         if palabras <= 12:
             faciles += 1
         elif palabras <= 17:
@@ -34,8 +35,8 @@ def analizar_articulo(article):
     print("Cantidad de oraciones difíciles de leer:", dificiles)
     print("Cantidad de oraciones muy difíciles de leer:", muy_dificiles)
 
-# El artículo proporcionado
-article = """título: Experiences in Developing a Distributed Agent-based Modeling Toolkit with Python Version 3
+# El articulo proporcionado
+articulo = """título: Experiences in Developing a Distributed Agent-based Modeling Toolkit with Python Version 3
     resumen: Distributed agent-based modeling (ABM) on high-performance
     computing resources provides the promise of capturing unprecedented
     details of large-scale complex systems. However, the specialized
@@ -49,5 +50,5 @@ article = """título: Experiences in Developing a Distributed Agent-based Modeli
     En este ejemplo se debe informar:
     Python C-API to create a scalable modeling system that can exploit the
     largest HPC resources and emerging computing architectures. """
-# Llamar a la función para analizar el artículo
-analizar_articulo(article)
+# Llamar a la funcion para analizar el articulo.
+analizar(articulo)
